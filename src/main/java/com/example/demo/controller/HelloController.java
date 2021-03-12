@@ -15,8 +15,6 @@ public class HelloController {
     @GetMapping("/{id}")
     public Message message(@PathVariable int id) {
 
-        Message message = messageMapper.findById(id);
-
-        return message;
+        return messageMapper.findById(id);
     }
 }
