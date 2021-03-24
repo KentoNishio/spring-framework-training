@@ -1,8 +1,6 @@
 package com.example.demo.controller.api;
 
-import com.example.demo.model.Message;
-import com.example.demo.model.User;
-import com.example.demo.model.mapper.MessageMapper;
+import com.example.demo.model.Account;
 import com.example.demo.model.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,13 +15,13 @@ public class UserController {
     private UserMapper userMapper;
 
     @GetMapping("/{id}")
-    public User findById(@PathVariable int id) {
+    public Account findById(@PathVariable int id) {
 
         return userMapper.findById(id);
     }
 
     @GetMapping("")
-    public List<User> all() {
+    public List<Account> all() {
         return userMapper.all();
     }
 }
